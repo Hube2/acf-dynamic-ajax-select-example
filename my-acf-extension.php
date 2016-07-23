@@ -24,9 +24,9 @@
 			
 			// I only want to do this on Posts and the city CPT
 			global $post;
-			if (!$post || 
-					!isset($post->ID) || 
-					(get_post_type($post->ID) != 'post' && get_post_type($post->ID) != 'city')) {
+			if (!$post ||
+			    !isset($post->ID) ||
+			    (get_post_type($post->ID) != 'post' && get_post_type($post->ID) != 'city')) {
 				return $field;
 			}
 			
@@ -55,9 +55,9 @@
 			
 			// I only want to do this on Posts
 			global $post;
-			if (!$post || 
-					!isset($post->ID) || 
-					get_post_type($post->ID) != 'post') {
+			if (!$post ||
+			    !isset($post->ID) || 
+			    get_post_type($post->ID) != 'post') {
 				return $field;
 			}
 			// get the state post id
