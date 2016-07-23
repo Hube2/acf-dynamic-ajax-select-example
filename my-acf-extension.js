@@ -6,13 +6,10 @@
 		// extend the acf.ajax object
 		var acfCustomFieldLocatioRule = acf.ajax.extend({
 			events: {
-				// this data-key must match the field key
-				// for the state field on the post page where
-				// you want to dynamically load the cities when
-				// the state is changed
+				// this data-key must match the field key for the state field on the post page where
+				// you want to dynamically load the cities when the state is changed
 				'change [data-key="field_579376f522130"] select': '_state_change',
-				// this entry is to cause the city field to be updated
-				// when the page is loaded
+				// this entry is to cause the city field to be updated when the page is loaded
 				'ready [data-key="field_579376f522130"] select': '_state_change',
 			},
 			
@@ -62,17 +59,12 @@
 						// function to update the city field choices
 						
 						// get the city field
+						// the city field key that we want to update
 						var $select = $('[data-key="field_5793770922131"] select');
 						
 						// add options to the city field
 						for (i=0; i<json.length; i++) {
-							//alert(json[i]['value']+':'+json[i]['label']);
-							//var $option = $select.createElement('option');
-							//$option.value = json[i]['value'];
-							//$option.text = json[i]['label'];
 							var $value = json[i]['value'];
-							//alert($value);
-							//alert($selected.indexOf($value));
 							var $item = '<option value="'+json[i]['value']+'">'+json[i]['label']+'</option>';
 							$select.append($item);
 						}
