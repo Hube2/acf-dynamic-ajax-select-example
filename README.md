@@ -11,7 +11,7 @@ PHP in this example uses OOP rather than simple functions.
 
 In this example I have set up two custom post types. The first custom post type is named 'State' and it
 is used to populate a list of US States. The second custom post type is named 'City' and it is used to
-populate a list of cities that are located in each state. The City post type includes a "Post Object"
+populate a list of cities that are located in each state. The City post type includes a select
 field to select a stated from the list of states.
 
 The file cpt-ui-export.txt is an export from the plugin 
