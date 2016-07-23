@@ -1,0 +1,6 @@
+_notes
+config.codekit
+.DS_Store
+*.LCK
+*.svn
+__assets/*
