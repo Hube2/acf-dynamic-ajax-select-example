@@ -72,6 +72,15 @@
 		
 		public function enqueue_script() {
 			// enqueue acf extenstion
+			// only enqueue the script on the post page
+			// where it needs to run
+			global $post;
+			if (!$post ||
+			    !isset($post->ID) || 
+			    get_post_type($post->ID) != 'post') {
+				return;
+			}
+			
 			$handle = 'my-acf-extension';
 			
 			// I'm using this method to set the src because
