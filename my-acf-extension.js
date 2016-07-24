@@ -4,7 +4,8 @@
 		if (typeof acf == 'undefined') { return; }
 		
 		// extend the acf.ajax object
-		var acfCustomFieldLocatioRule = acf.ajax.extend({
+		// you should probably rename this var
+		var myACFextension = acf.ajax.extend({
 			events: {
 				// this data-key must match the field key for the state field on the post page where
 				// you want to dynamically load the cities when the state is changed
