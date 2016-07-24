@@ -44,8 +44,8 @@
 				foreach ($query->posts as $state) {
 					$choices[$state->ID] = $state->post_title;
 				}
-				$field['choices'] = $choices;
 			}
+			$field['choices'] = $choices;
 			return $field;
 		} // end public function load_state_field_choices
 		
