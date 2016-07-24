@@ -65,7 +65,6 @@
 						
 						// add options to the city field
 						for (i=0; i<json.length; i++) {
-							var $value = json[i]['value'];
 							var $item = '<option value="'+json[i]['value']+'">'+json[i]['label']+'</option>';
 							$select.append($item);
 						}
