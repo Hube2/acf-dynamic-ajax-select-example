@@ -72,8 +72,16 @@
 		
 		public function enqueue_script() {
 			// enqueue acf extenstion
-			// only enqueue the script on the post page
-			// where it needs to run
+			
+			// only enqueue the script on the post page where it needs to run
+			/* *** THIS IS IMPORTANT
+			       ACF uses the same scripts as well as the same field identification
+			       markup (the data-key attribute) if the ACF field group editor
+			       because of this, if you load and run your custom javascript on
+			       the field group editor page it can have unintended side effects
+			       on this page. It is important to alway make sure you're only
+			       loading scripts where you need them.
+			*/
 			global $post;
 			if (!$post ||
 			    !isset($post->ID) || 
