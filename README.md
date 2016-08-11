@@ -1,5 +1,7 @@
 # ACf Dynamic AJAX Field Examples
 
+***This example only works in ACF5***
+
 This repo contains several examples of using AJAX to dynamically load fields based on the values
 in other fields. See the individual example folders for more information.
 
