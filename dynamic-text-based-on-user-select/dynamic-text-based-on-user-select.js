@@ -52,7 +52,9 @@
 					dataType:	'json',
 					async: true,
 					success: function(json){
-						// function to update the city field choices
+						// function to populate fields
+						// loop through the values returned
+						// and insert into fields
 						for (i=0; i<json.length; i++) {
 							var $key = json[i]['key'];
 							var $value = json[i]['value'];
