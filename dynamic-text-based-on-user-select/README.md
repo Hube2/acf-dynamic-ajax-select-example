@@ -1,5 +1,7 @@
 # ACf Text Fields based on User field
 
+***This example only workds in ACF5***
+
 This repo is an example of how to dynamically load some ACF text fields based on the selection made in
 another user type field. This is another example can be used as the basis of understanding how to 
 extend ACF to use AJAX for the creation of dyanmic fields. Every field type in ACF will need slightly 
