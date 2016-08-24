@@ -5,7 +5,7 @@
 	class myUserFieldextension {
 		
 		public function __construct() {
-			// ajax action for loading city choices
+			// ajax action for loading user values
 			add_action('wp_ajax_load_user_details', array($this, 'ajax_load_user_details'));
 			// enqueue js extension for acf
 			// do this when ACF in enqueuing scripts
@@ -45,7 +45,7 @@
 		} // end public function enqueue_script
 		
 		public function ajax_load_user_details() {
-			// this funtion is called by AJAX to the user information
+			// this funtion is called by AJAX to get the user information
 			// based on user selection
 			
 			// we can use the acf nonce to verify
