@@ -24,6 +24,9 @@
 			       on this page. It is important to alway make sure you're only
 			       loading scripts where you need them.
 			*/
+			
+			// your should change this to check for whatever
+			// admin page(s) you want the script to load on
 			global $post;
 			if (!$post ||
 			    !isset($post->ID) || 
