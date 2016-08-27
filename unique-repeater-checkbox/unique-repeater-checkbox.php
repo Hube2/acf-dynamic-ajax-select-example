@@ -1,7 +1,7 @@
 <?php 
 	
 	// enqueue our JS when ACF envques scripts
-	add_action('acf/input/admin_enqueue_scripts', array($this, 'unique_repeater_checkbox_enqueue_script'));
+	add_action('acf/input/admin_enqueue_scripts', 'unique_repeater_checkbox_enqueue_script');
 	
 	function unique_repeater_checkbox_enqueue_script() {
 		// enqueue acf extenstion
