@@ -19,7 +19,7 @@
 			events: {
 				// for each field that you want to apply this to add a 'change' event line
 				// and copy the field key for the field and paste it in the "data-key" value
-				'change [data-key="field_5743070a14fa1"] input': '_update_unique_checkbox',
+				'change [data-key="field_57c4e1b657543"] input': '_update_unique_checkbox',
 			},
 			
 			_update_unique_checkbox: function(e) {
@@ -31,8 +31,12 @@
 				}
 				// the field is checked, get the currently selected item
 				var $id = e.$el.prop('id');
-				// get the field from all of the rows in the repeater, except the ACF clone row
-				var $list = $('[data-key="field_5743070a14fa1"] input').not('[data-key="field_5743070a14fa1"] input[type="hidden"]').not('.acf-clone [data-key="field_5743070a14fa1"] input');
+				// get the data-key
+				var $key = e.$el.closest('.acf-field').attr('data-key');
+				
+				// get the field from all of the rows in the repeater
+				// exclude hidden fields and the ACF clone row
+				var $list = $('[data-key="'+$key+'"] input').not('[data-key="'+$key+'"] input[type="hidden"]').not('.acf-clone [data-key="'+$key+'"] input');
 				if ($list.length == 1) {
 					// if there is only one row then bail
 					// nothing needs to be done
