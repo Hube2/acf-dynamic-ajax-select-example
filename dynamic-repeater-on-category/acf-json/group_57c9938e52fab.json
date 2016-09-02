@@ -1,0 +1,64 @@
+{
+    "key": "group_57c9938e52fab",
+    "title": "Term Repeater for Example",
+    "fields": [
+        {
+            "key": "field_57c99408fefa1",
+            "label": "Features",
+            "name": "features",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_57c99428fefa2",
+                    "label": "Feature",
+                    "name": "feature",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "sprocket-category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1472828549
+}
