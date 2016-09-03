@@ -114,7 +114,7 @@
 				
 				/*
 						*** IMPORTANT NOTE ***
-						setting meta_box_cb to false
+						setting meta_box_cb to an empty string
 						causes WP to not show the standard meta box
 						for selecting the terms of a taxonomy
 						this is important for this example
@@ -123,7 +123,7 @@
 						if the term is selected in the meta box
 						none of the code in this example will work
 				*/
-				'meta_box_cb' => false
+				'meta_box_cb' => ''
 			);
 			register_taxonomy('sprocket-category', array($post_type), $args);
 			
