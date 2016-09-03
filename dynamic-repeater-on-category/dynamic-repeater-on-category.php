@@ -42,8 +42,6 @@
 			// post id must be an integer
 			$post_id = intval($_POST['post_id']);
 			
-			//echo $post_id; exit;
-			
 			// the taxonomy of the term
 			// we should not need to use this since split terms
 			// but get_term_by() still requires the taxonomy
@@ -51,7 +49,6 @@
 			$taxonomy = 'sprocket-category';
 			
 			$term = get_term_by('id', $term_id, $taxonomy);
-			//print_r($term); exit;
 			
 			if (!$term) {
 				// no term found
@@ -65,9 +62,7 @@
 			// see if this term is the term already set for this post
 			// if it is return the current values for the post if there are any
 			$current_term = get_field('category', $post_id);
-			//echo $current_term; exit;
-			//print_r(get_field('features', $post_id)); exit;
-			//echo $current_term,'=',$term_id; exit;
+			
 			if ($current_term == $term_id) {
 				//echo 'get_current_values'; exit;
 				if (have_rows('features', $post_id)) {
@@ -89,7 +84,6 @@
 				echo json_encode($values);
 				exit;
 			}
-			//echo 'wtf'; exit;
 			// no existing value
 			// get features from term
 			if (have_rows('features', $taxonomy.'_'.$term_id)) {

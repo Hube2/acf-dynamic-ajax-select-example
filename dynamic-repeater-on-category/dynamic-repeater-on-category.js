@@ -121,7 +121,6 @@
 			}, // end _setup
 		});
 		
-		// triger the ready action on page load
-		//$('[data-key="field_57c994a6d8ee5"] input').trigger('ready');
+		// triger the setup action on page load
 		$('[data-key="field_57c994a6d8ee5"] input').trigger('setup');
 	});
