@@ -5,7 +5,7 @@
 		if creates a custom post type and a custom taxonomy
 		and it loads the field groups for the example
 		
-		SEE IMPORTANT NOTE IN THE REGITER METHOD FOR TAXONOMY ARGUMENTS
+		SEE IMPORTANT NOTE IN THE REGISTER METHOD FOR TAXONOMY ARGUMENTS
 	*/
 	
 	new my_dynamic_acf_extension_extras();
@@ -18,8 +18,9 @@
 		} // end public function __construct
 		
 		public function field_groups() {
-			//echo 'here'; die;
 			// this function loads the example field groups
+			// this can be used as an example of how to load
+			// your own ACF field groups from json files
 			$path = dirname(__FILE__).'/acf-json';
 			if (!is_dir($path) ||
 					($files = scandir($path)) == false ||
@@ -35,21 +36,11 @@
 					continue;
 				}
 				$group = json_decode($json, true);
-				//print_r($group); die;
 				if ($group === NULL) {
 					continue;
 				}
-				if (acf_local()->is_field_group($group['key'])) {
-					echo 'exists'; die;
-				}
-				//echo 'does not exist'; die;
-				//echo '<pre>'; print_r(acf_get_valid_field_group($group)); die;
-				//$fields = acf_extract_var($group, 'fields'); //echo '<pre>'; print_r($fields); die;
-				//$fields = acf_prepare_fields_for_import( $fields ); echo '<pre>'; print_r($fields); die;
 				acf_add_local_field_group($group);
 			}
-			
-			//wp_cache_delete('get_field_groups', 'acf');
 		} // end public function field_groups
 		
 		public function register() {
@@ -120,6 +111,19 @@
 				'show_in_rest' => false,
 				'rest_base' => '',
 				'show_in_quick_edit' => true,
+				
+				/*
+						*** IMPORTANT NOTE ***
+						setting meta_box_cb to false
+						causes WP to not show the standard meta box
+						for selecting the terms of a taxonomy
+						this is important for this example
+						because the term must be selected using
+						the ACF field and not the meta box
+						if the term is selected in the meta box
+						none of the code in this example will work
+				*/
+				'meta_box_cb' => false
 			);
 			register_taxonomy('sprocket-category', array($post_type), $args);
 			
