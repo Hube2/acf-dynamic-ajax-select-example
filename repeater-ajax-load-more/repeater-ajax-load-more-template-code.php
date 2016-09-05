@@ -56,7 +56,7 @@
 					// make ajax request
 					jQuery.post(
 						my_repeater_ajax_url, {
-							// this is the action we set up in PHP
+							// this is the AJAX action we set up in PHP
 							'action': 'my_repeater_show_more',
 							'post_id': my_repeater_field_post_id,
 							'offset': my_repeater_field_offset,
@@ -64,6 +64,8 @@
 						},
 						function (json) {
 							// add content to container
+							// this ID must match the containter 
+							// you want to append content to
 							jQuery('#my-repeater-list-id').append(json['content']);
 							// update offset
 							my_repeater_field_offset = json['offset'];
