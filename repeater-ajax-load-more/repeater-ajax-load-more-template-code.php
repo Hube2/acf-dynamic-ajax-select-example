@@ -71,6 +71,7 @@
 							my_repeater_field_offset = json['offset'];
 							// see if there is more, if not then hide the more link
 							if (!json['more']) {
+								// this ID must match the id of the show more link
 								jQuery('#my-repeater-show-more-link').css('display', 'none');
 							}
 						},
