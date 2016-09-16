@@ -1,0 +1,113 @@
+{
+    "key": "group_57d9e88cbd4ed",
+    "title": "Dynamic Field on Relationship Example",
+    "fields": [
+        {
+            "key": "field_57d9e8a359b75",
+            "label": "relationship",
+            "name": "relationship",
+            "type": "relationship",
+            "instructions": "This is the relationship field. When you select a related post in this field the title, excerpt and featured image from that post will be inserted into the fields below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_57d9e8d659b76",
+            "label": "relationship title",
+            "name": "relationship_title",
+            "type": "text",
+            "instructions": "The title of the related post will be put here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_57d9e8f559b77",
+            "label": "relationship excerpt",
+            "name": "relationship_excerpt",
+            "type": "textarea",
+            "instructions": "The excerpt from the related post will be put there",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_57d9e92159b78",
+            "label": "relationship image",
+            "name": "relationship_image",
+            "type": "image",
+            "instructions": "The featured image from the related post will go here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1473956949
+}
