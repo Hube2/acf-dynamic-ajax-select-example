@@ -1,6 +1,5 @@
 <?php 
 	
-	//echo 'here'; die;
 	new my_dynmamic_field_on_relationship();
 	
 	// you should probably change the name of this class and

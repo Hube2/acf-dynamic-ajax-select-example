@@ -14,6 +14,7 @@ anything more complicated.
 ## Setup
 
 In order to set up this example you will need to:
+
 1. Create a relationship field
 2. Create a title "text" field to be populated
 3. Create an excerpt "textarea" field to be populated
