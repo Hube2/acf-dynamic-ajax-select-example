@@ -94,8 +94,6 @@
 					async: true,
 					success: function(json){
 						
-						//console.log(json);
-						
 						if (!json) {
 							return;
 						}
