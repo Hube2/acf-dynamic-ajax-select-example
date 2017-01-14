@@ -7,7 +7,6 @@
 	class my_dynmamic_field_on_relationship {
 		
 		public function __construct() {
-			//echo 'here 5'; die;
 			// enqueue js extension for acf
 			// do this when ACF in enqueuing scripts
 			add_action('acf/input/admin_enqueue_scripts', array($this, 'enqueue_script'));
@@ -113,7 +112,6 @@
 		} // end public function load_content_from_relationship
 		
 		public function enqueue_script() {
-			//echo 'here'; die;
 			// enqueue acf extenstion
 			
 			// only enqueue the script on the post page where it needs to run
