@@ -12,3 +12,5 @@ to modify the JavaScript file in this example.
 Please note that this does not force one of the true/false fields in one of rows to be checked until 
 one of them has actually been checked. When I use this if no rows are check then I add code to my PHP
 to assume that the field in the first row is checked.
+
+***Note: I do not know if this will work with the UI Toggle added to the True/False field in version 5.5.0 of ACF. I have not tested it. My guess is that it will not.**
