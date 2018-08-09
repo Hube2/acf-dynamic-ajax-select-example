@@ -25,7 +25,8 @@ repeater field located on a post with values from a repeater field of the chosen
 
 **repeater-ajax-load-more:** This is an example of how to create a "Load More" feature for a repeater field.
 
-**unique-repeater-checkbox:** This example shows how to create a true/false field in a repeater that will only 
+**unique-repeater-checkbox:**  
+*updated JS to work with ACF >= 5.7*
+This example shows how to create a true/false field in a repeater that will only 
 allow the field to be checked in one row of the repeater. A multi-row radio field.
-
 
