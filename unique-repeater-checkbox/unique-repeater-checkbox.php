@@ -31,7 +31,12 @@
 		// I don't know where this file will be located
 		// you should alter this to use the correct fundtions
 		// to set the src value to point to the javascript file
-		$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/unique-repeater-checkbox.js';
+		$version = acf_get_setting('version');
+		if (version_compare($acf_version, '5.7.0', '<')) {
+			$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/unique-repeater-checkbox.js';
+		} else {
+			$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/unique-repeater-checkbox-acf57.js';
+		}
 		// make this script dependent on acf-input
 		$depends = array('acf-input');
 		
