@@ -90,12 +90,16 @@
 			}
 			
 			$handle = 'my-acf-extension';
-			
-			// I'm using this method to set the src because
-			// I don't know where this file will be located
-			// you should alter this to use the correct fundtions
-			// to set the src value to point to the javascript file
-			$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/my-acf-extension.js';
+			$version = acf_get_setting('version');
+			if (version_compare($acf_version, '5.7.0', '<')) {
+				// I'm using this method to set the src because
+				// I don't know where this file will be located
+				// you should alter this to use the correct fundtions
+				// to set the src value to point to the javascript file
+				$$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/my-acf-extension.js';
+			} else {
+				$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/dynamic-select-on-select.js';
+			}
 			// make this script dependent on acf-input
 			$depends = array('acf-input');
 			
