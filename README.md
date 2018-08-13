@@ -19,7 +19,7 @@ in a relationship field.
 **dynamic-repeater-on-category:** This example is a bit more complicated than the ones below. It will load a
 repeater field located on a post with values from a repeater field of the chosen post category.
 
-**dynamic-select-example:** Load values into a select field based on a choice made in another select field
+**dynamic-select-example:** *updated JS to work with ACF >= 5.7* Load values into a select field based on a choice made in another select field
 
 **dynamic-text-based-on-user-select:** Loads text fields based on the selection made for a user field
 
