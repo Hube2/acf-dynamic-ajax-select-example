@@ -58,6 +58,9 @@
 		data = acf.prepareForAjax(data);
 		
 		// make ajax request
+		// instead of going through the acf.ajax object to make requests like in <5.7
+		// we need to do a lot of the work ourselves, but other than the method that's called
+		// this has not changed much
 		this.request = $.ajax({
 			url: acf.get('ajaxurl'), // acf stored value
 			data: data,
