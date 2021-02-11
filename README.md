@@ -1,5 +1,8 @@
 # ACf Dynamic AJAX Field Examples
 
+## Important Note
+ACF In constantly changing. It is possible that any of the examples here may stop working with an update to ACF. I do not actively maintian these examples or continuously monitor them to make sure they are working. This repository was created to hold examples of some things that may help other. If you find that something is not working as expected you can open an issue, however, unless I have the free time the chances of me fixing the issue are small. This is why I will gladly take pull request for fixing problems with compatibility.
+
 ***MANY OF THESE EXAMPLES CURRENTLY DO NOT WORK WITH ACF >= 5.7.0 AND NEED TO BE REWORKED FOR THIS VERION. THE ONES THAT HAVE BEEN REWORKED HAVE NOTES ABOUT IT. THERE WAS A SIGNIFICANT CHANGE IN ACFs JS API IN VERSION 5.7.0***
 
 ***These examples only works in ACF5***
