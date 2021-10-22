@@ -96,7 +96,7 @@
 				// I don't know where this file will be located
 				// you should alter this to use the correct fundtions
 				// to set the src value to point to the javascript file
-				$$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/my-acf-extension.js';
+				$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/my-acf-extension.js';
 			} else {
 				$src = '/'.str_replace(ABSPATH, '', dirname(__FILE__)).'/dynamic-select-on-select.js';
 			}
